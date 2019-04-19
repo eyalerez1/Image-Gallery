@@ -1,0 +1,46 @@
+.wrapper {
+  background: #f5f6f7;
+  height: 100%;
+}
+
+.toolbar-wrapper {
+  width: 100%;
+  background-color: #1877F2;
+}
+
+.toolbar {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.header {
+  color: white;
+  font-family: sans-serif;
+  margin: 2px 0 0;
+}
+
+.search-zone {
+  width: 100%;
+}
+
+.search-field {
+  width: 100%;
+}
+
+.radio-option {
+  margin: 0 10px;
+}
+
+.results-wrapper {
+  overflow-y: auto;
+  margin: 20px 0 20px 20px;
+}
+
+.image-wrapper {
+  margin: 4px;
+}
+
+.image {
+  height: 150px;
+  width: 150px;
+}

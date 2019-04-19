@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-select {
+  .mat-form-field-label, .mat-select-arrow, .mat-select-value {
+    color: white;
+  }
+}
+
+.mat-form-field-empty .mat-form-field-label, .mat-select-placeholder {
+  color: white;
+}
+
+
+.mat-select-disabled {
+  .mat-form-field-empty .mat-form-field-label, .mat-select-value .mat-select-placeholder, .mat-select-arrow {
+    color: rgba(0,0,0,.54);
+  }
+}
+
+.mat-form-field-label-wrapper .mat-form-field-label {
+  color: white;
+}
+.mat-form-field-disabled .mat-form-field-label-wrapper .mat-form-field-label {
+  color: rgba(0,0,0,.54);
+}
+
+
+.mat-form-field .mat-form-field-wrapper .mat-form-field-underline {
+  background-color: white;
+}
+
+.mat-radio-button .mat-radio-label {
+  .mat-radio-container {
+    .mat-radio-inner-circle {
+      background-color: white;
+    }
+
+    .mat-radio-outer-circle {
+      border-color: white;
+    }
+  }
+
+  .mat-radio-label-content {
+    color: white;
+  }
+
+  .mat-radio-ripple .mat-ripple-element {
+    background-color: white;
+  }
+}
+
+.mat-radio-disabled .mat-radio-label {
+  .mat-radio-container {
+    .mat-radio-inner-circle {
+      background-color: rgba(0,0,0,.54);
+    }
+
+    .mat-radio-outer-circle {
+      border-color: rgba(0,0,0,.54);
+    }
+  }
+
+  .mat-radio-label-content {
+    color: rgba(0,0,0,.54);
+  }
+
+  .mat-radio-ripple .mat-ripple-element {
+    background-color: rgba(0,0,0,.54);
+  }
+}
+
+.radio-label {
+  color: white;
+  margin: 0 10px;
+}
+
+.radio-label-disabled {
+  color: rgba(0,0,0,.54);
+  margin: 0 10px;
+}
+
+/*.toolbar-wrapper .mat-input-element {
+  color: white;
+}
+
+.toolbar-wrapper .mat-form-field.mat-focused .mat-form-field-label {
+  color: white;
+}*/
+
+.toolbar-wrapper {
+  .mat-input-element, .mat-form-field.mat-focused .mat-form-field-label {
+    color: white;
+  }
+}

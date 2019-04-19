@@ -1,0 +1,37 @@
+<div class="wrapper" fxLayout="column" fxLayoutAlign="start center">
+  <div class="toolbar-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <div class="toolbar" fxLayout="column" fxLayoutAlign="center center">
+      <h2 class="header">Image Gallery</h2>
+      <div class="search-zone" fxLayout="row" fxLayoutAlign="space-around start">
+        <div class="single-search" fxLayout="column" fxLayoutAlign="center center">
+          <mat-form-field class="search-field" floatLabel="never">
+            <input placeholder="Search for images..." matInput [(ngModel)]="query"
+                   [disabled]="isMultipleSearch" (keyup)="emitQueryChange($event)" >
+          </mat-form-field>
+          <button class="save-button" mat-raised-button (click)="save()" [disabled]="isMultipleSearch">Save</button>
+        </div>
+        <div class="multiple-search" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="12px">
+          <mat-form-field class="saved-queries-form-field">
+            <mat-label>Saved Searches</mat-label>
+            <mat-select #multiSelect multiple (selectionChange)="searchMultiple($event.value)" [disabled]="!savedQueries.length">
+              <mat-option *ngFor="let query of savedQueries" [value]="query.query">{{query.query}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <section class="operation-buttons-wrapper">
+            <label [ngClass]="isMultipleSearch ? 'radio-label' : 'radio-label-disabled'">Align:</label>
+            <mat-radio-group (change)="onOperationChange()" [disabled]="!isMultipleSearch" [(ngModel)]="operation">
+              <mat-radio-button class="radio-option" value="or">OR</mat-radio-button>
+              <mat-radio-button class="radio-option" value="and">AND</mat-radio-button>
+            </mat-radio-group>
+          </section>
+          <button class="clear-button" mat-raised-button (click)="clear()" [disabled]="!savedQueries.length">Clear saved searches</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="results-wrapper" fxLayout="row wrap" fxLayoutAlign="center start">
+    <div class="image-wrapper" *ngFor="let photo of photos">
+      <img [title]="photo.title" class="image" [src]="photo.url">
+    </div>
+  </div>
+</div>
